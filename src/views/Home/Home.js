@@ -8,7 +8,10 @@ const Home = () => {
     const [title, setTitle] = useState('')
     const [description, setDescrtpion] = useState('')
 
-    
+    const clear = () =>{
+        setName('')
+        setTitle('')
+        setDescrtpion('')
     }
     const addDataToCard = () => {
         const randomId = Math.floor(Math.random() * 1000)
