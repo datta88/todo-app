@@ -11,7 +11,10 @@ const Task = ({ name, title, description, id, remove }) => {
                 <div>{name}</div>
                 <div>{title}</div>
                 <div>{description}</div>
-                
+                <button
+                onClick={() => {remove() }}
+                >
+                    🛒</button>
             </div>
         </>
     )

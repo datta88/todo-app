@@ -8,6 +8,8 @@ const Home = () => {
     const [title, setTitle] = useState('')
     const [description, setDescrtpion] = useState('')
 
+    
+    }
     const addDataToCard = () => {
         const randomId = Math.floor(Math.random() * 1000)
         const obj = {
@@ -19,20 +21,19 @@ const Home = () => {
         const val = [...tata, obj]
         setTata(val);
         localStorage.setItem("DataStrore", JSON.stringify(val))
-        setName('')
-        setTitle('')
-        setDescrtpion('')
+        clear();
     }
-    const remove = () => {
-        const rem = {
-            id: '',
-            name: '',
-            title: '',
-            description: '',
-        }
-        const removedata = [...tata, rem];
-        setTata(removedata)
-    }
+
+    const remove = (obj) => {
+        const index = tata.indexOf(obj);
+        const indexArray = tata;
+        indexArray.splice(index, 1);
+        setTata([...indexArray]);
+    };
+
+
+   
+
     return (
         <>
             <h1 className="text-center" >ToDo List</h1>
